@@ -1,0 +1,97 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Nov 13 00:34:53 2020
+| Host         : LMLPT39 running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    30 |
+| Unused register locations in slices containing registers |    38 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            1 |
+|    16+ |           27 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              46 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             160 |           23 |
+| Yes          | No                    | No                     |             452 |           76 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------+----------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|                 Clock Signal                 |                 Enable Signal                |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++----------------------------------------------+----------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+| ~design_1_i/vgaProject_0/inst/H/HS           |                                              |                                                             |                2 |              4 |
+| ~design_1_i/vgaProject_0/inst/pixelClock/out |                                              |                                                             |                2 |              6 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/state[3]_i_1_n_0       |                                                             |                1 |              8 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[7][7]_i_1_n_0   |                                                             |                2 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[6][7]_i_1_n_0   |                                                             |                3 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[5][7]_i_1_n_0   |                                                             |                3 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[4][7]_i_1_n_0   |                                                             |                3 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[3][7]_i_1_n_0   |                                                             |                2 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[2][7]_i_1_n_0   |                                                             |                4 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[1][7]_i_1_n_0   |                                                             |                4 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[0][7]_i_1_n_0   |                                                             |                3 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/median[8][7]_i_1_n_0   |                                                             |                5 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/pix_00[7]_i_1_n_0      |                                                             |                1 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/pix_01[7]_i_1_n_0      |                                                             |                1 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/pix_20[7]_i_1_n_0      |                                                             |                1 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/pix_21[7]_i_1_n_0      |                                                             |                2 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/pix_22[7]_i_1_n_0      |                                                             |                1 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/pix_02[7]_i_1_n_0      |                                                             |                3 |             16 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/countery[10]_i_1_n_0   |                                                             |                5 |             22 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/counterx[10]_i_1_n_0   |                                                             |                6 |             22 |
+|  design_1_i/vgaProject_0/inst/pixelClock/out |                                              | design_1_i/vgaProject_0/inst/H/posCount[10]_i_1_n_0         |                3 |             22 |
+|  design_1_i/vgaProject_0/inst/H/HS           |                                              | design_1_i/vgaProject_0/inst/V/posCount[10]_i_1__0_n_0      |                4 |             22 |
+|  design_1_i/vgaProject_0/inst/pixelClock/out |                                              | design_1_i/vgaProject_0/inst/H/clear                        |                4 |             26 |
+|  design_1_i/vgaProject_0/inst/H/HS           |                                              | design_1_i/vgaProject_0/inst/V/count[0]_i_1__0_n_0          |                4 |             26 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/addr_out_s[13]_i_1_n_0 |                                                             |                6 |             28 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/out                    |                                                             |                4 |             32 |
+|  clk_IBUF_BUFG                               |                                              |                                                             |                9 |             36 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/sum_do                 |                                                             |                6 |             40 |
+|  clk_IBUF_BUFG                               | design_1_i/mem_0/inst/addr_out_reg2          |                                                             |               10 |             60 |
+|  clk_IBUF_BUFG                               |                                              | design_1_i/vgaProject_0/inst/pixelClock/count[0]_i_1__1_n_0 |                8 |             64 |
++----------------------------------------------+----------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+
+
